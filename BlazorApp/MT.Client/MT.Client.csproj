@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Blazor.ModuleFederation.Angular" Version="0.1.3" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.6" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.6" PrivateAssets="all" />
   </ItemGroup>
@@ -14,5 +15,22 @@
   <ItemGroup>
     <ProjectReference Include="..\MT.Shared\MT.Shared.csproj" />
   </ItemGroup>
+
+  <PropertyGroup>
+      <ModuleFederationName>blazormodule</ModuleFederationName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'DEBUG'">
+      <MicroFrontendBaseUrl>http://localhost:5067/</MicroFrontendBaseUrl>
+      <BuildModuleFederationScript>False</BuildModuleFederationScript>
+      <IsProduction>False</IsProduction>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'RELEASE'">
+      <MicroFrontendBaseUrl>http://localhost:8080/</MicroFrontendBaseUrl>
+      <BuildModuleFederationScript>True</BuildModuleFederationScript>
+      <IsProduction>True</IsProduction>
+  </PropertyGroup>
+
 
 </Project>
