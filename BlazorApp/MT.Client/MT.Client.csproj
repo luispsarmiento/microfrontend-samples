@@ -27,7 +27,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'RELEASE'">
-      <MicroFrontendBaseUrl>http://localhost:8080/</MicroFrontendBaseUrl>
+      <MicroFrontendBaseUrl>https://localhost:7003/</MicroFrontendBaseUrl>
       <BuildModuleFederationScript>True</BuildModuleFederationScript>
       <IsProduction>True</IsProduction>
   </PropertyGroup>

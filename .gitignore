@@ -145,3 +145,5 @@ confidential/
 
 # Exclude the gitignore file itself
 !.gitignore
+
+BlazorWasmPublished/
