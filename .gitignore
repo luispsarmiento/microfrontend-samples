@@ -110,7 +110,7 @@ out-tsc/
 # Blazor
 bin/
 obj/
-wwwroot/
+# wwwroot/
 
 # TailwindCSS
 tailwind.config.js
